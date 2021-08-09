@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native'
+import {Dimensions, StyleSheet} from 'react-native'
 /**
  *
  * #303e45
@@ -31,6 +31,11 @@ const main = StyleSheet.create({
     todoCount: {
         fontSize:25,
         color,
+    },
+    emptyComponent:{
+        color:'white',
+        textAlign:'center',
+        fontSize:25
     }
 })
 
@@ -46,7 +51,32 @@ const todo_input = StyleSheet.create({
         padding:10,
         margin:10,
         borderRadius:5
+    },
+    buttonContainer:{
+        backgroundColor:'#4a636e',
+        padding:10,
+        margin:10,
+        width:Dimensions.get('window').width / 2,
+        alignSelf:'center',
+        borderRadius:8,
+    },
+    buttonText:{
+        color:'white',
+        fontWeight:'bold',
+        textAlign:'center'
     }
 })
 
-export  {main, todo_input}
+
+const todo_card = StyleSheet.create({
+    container:{
+        backgroundColor:"#a7b6bd",
+        padding:5,
+        margin:5,
+        borderRadius:10
+    },
+    text:{
+        fontSize:18
+    }
+})
+export  {main, todo_input, todo_card}
